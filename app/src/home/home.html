@@ -1,0 +1,41 @@
+<!-- Banner -->
+
+<div id="banner-wrapper">
+    <div id="banner" class="box container">
+        <div class="row">
+            <div class="7u 12u(medium)">
+                <h2>Oi, eu sou o Goku.</h2>
+                <p>Eu amo o EasyBook e irei protege-lo</p>
+            </div>
+            <div class="5u 12u(medium)">
+                <ul>
+                    <li><a href="#/login" class="button big icon fa-arrow-circle-right">Login</a></li>
+                    <li><a href="#/cadastro" class="button alt big icon fa-question-circle">Cadastre-se</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features -->
+<div id="features-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="4u 12u(medium)" ng-repeat="livro in livros">
+
+                <!-- Box -->
+                <section class="box feature">
+                    <a href="#" class="image featured"><img ng-src='data:image/*; base64,{{livro.imagem}}'/></a>
+                    <div class="inner">
+                        <header>
+                            <h2>{{livro.nome}}</h2>
+                        </header>
+                        <p>{{livro.autor}}</p>
+                        <p><strong>{{livro.preco  | currency:'R$':2}}</strong></p>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+</div>
