@@ -7,10 +7,12 @@
                 <h2>Oi, eu sou o Goku.</h2>
                 <p>Eu amo o EasyBook e irei protege-lo</p>
             </div>
-            <div class="5u 12u(medium)">
+            <div class="5u 12u(medium)" >
                 <ul>
-                    <li><a href="#/login" class="button big icon fa-arrow-circle-right">Login</a></li>
-                    <li><a href="#/cadastro" class="button alt big icon fa-question-circle">Cadastre-se</a></li>
+                    <!-- <li><a href="#/login" class="button big icon fa-arrow-circle-right">Login</a></li> -->
+                    <li><a ng-show="!authDetails.authenticated" class="button big icon fa-arrow-circle-right" href="#/login">Login</a></li>
+                    <li><a ng-show="!authDetails.authenticated" class="button alt big icon fa-question-circle" href="#/cadastro">Cadastre-se</a></li>
+                    <!-- <li><a href="#/cadastro" class="button alt big icon fa-question-circle">Cadastre-se</a></li> -->
                 </ul>
             </div>
         </div>

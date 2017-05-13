@@ -3,7 +3,7 @@
 <html ng-app="easybook">
 
 <head>
-    <title>Verti by HTML5 UP</title>
+    <title>EasyBook</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -31,12 +31,15 @@
                 </div>
 
                 <!-- Nav -->
-                <nav id="nav">
+                <nav id="nav" ng-controller="headerSrv">
                     <ul>
                         <li class="current_page_item"><a href="#/">Home</a></li>
-                        <li><a href="#/cadastro">Cadastre-se</a></li>
-                        <li><a href="#/login">Entrar</a></li>
-                        <li><a href="">Sair</a></li>
+                        <!-- <li><a href="#/cadastro">Cadastre-se</a></li> -->
+                        <li><a ng-show="!authDetails.authenticated" href="#/cadastro">Cadastre-se</a></li>
+                        <!-- <li><a href="#/login">Entrar</a></li> -->
+                        <li ng-show="!authDetails.authenticated"><a href="#/login">Entrar</a></li>
+                        <li ng-show="authDetails.authenticated"><a ng-click="logout()" href="#/">Sair</a></li>
+                        <!-- <li><a href="#/logout" ng-click ="logout()">Sair</a></li> -->
                     </ul>
                 </nav>
 
@@ -152,9 +155,15 @@
 
     <script src="src/index.js"></script>
 
+    <script src="src/anuncio/anuncio.js"></script>
+
     <script src="src/home/home.js"></script>
 
-    <script src="src/anuncio/anuncio.js"></script>
+    <script src="src/cadastro/cadastro.js"></script>
+
+    <script src="src/login/login.js"></script>
+
+    <script src="src/login/login.logout.service.js"></script>
 
     <script src="src/usuario/usuario.js"></script>
 
@@ -163,12 +172,6 @@
     <script src="src/utils/interceptor.js"></script>
 
     <script src="src/utils/util.services.js"></script>
-
-    <script src="src/login/login.js"></script>
-
-    <script src="src/login/login.logout.service.js"></script>
-
-    <script src="src/cadastro/cadastro.js"></script>
 
     <!-- endinject -->
 
