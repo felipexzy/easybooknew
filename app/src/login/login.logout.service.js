@@ -23,7 +23,7 @@ angular.module('easybook')
           if (data.name) {
             $rootScope.authDetails = { name: data.name, authenticated: data.authenticated, permissions: data.authorities };
             $localStorage.authDetails = $rootScope.authDetails;
-            $location.path('/');
+            $location.path('/anuncio');
             ngNotify.set('Seja bem-vindo as profundezas do #descubra ' + data.name + '.', 'success');
           } else {
             $rootScope.authDetails = { name: '', authenticated: false, permissions: [] };
