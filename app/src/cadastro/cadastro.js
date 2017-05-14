@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('easybook')
-.controller('CadCtrl', function($scope, ngNotify, RestSrv, SERVICE_PATH, $http) {
+.controller('CadCtrl', function($scope, ngNotify, RestSrv, SERVICE_PATH) {
 
     var cadastroUrl = SERVICE_PATH.PUBLICO_PATH + '/cadastro';
 
