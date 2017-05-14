@@ -68,6 +68,8 @@
           <label>ISBN: {{livro.ISBN}}</label><br/>
           <label>Editora: {{livro.editora}}</label><br/>
           <label>Preço: {{livro.preco  | currency:'R$':2}}</label><br/>
+          <label>Em viado por: {{livro.usuario.nome}}</label><br/>
+          <label>Contato: {{livro.usuario.telefone}}</label><br/>
           <label>Descrição: {{livro.descricao}}</label><br/>
       </div>
       <div class="modal-footer">
