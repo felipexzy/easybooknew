@@ -1,7 +1,7 @@
 
 <section class="container">
 
-    <form id="form-cadastro" ng-submit="cadastro(usuario)">
+    <form id="form-cadastro" ng-submit="cadastro(usuario)" class="8u -2u 12u(medium)">
 
         <div>
             <label for="nome">Nome: </label>
@@ -16,8 +16,8 @@
             <input type="text" id="endereco" name="endereco" maxlength="45" minlength="1" ng-model="usuario.endereco"/>
         </div>
         <div>
-            <label for="telefone">Telefone: </label>
-             <input type="text" name="telefone" maxlength="12" ng-model="usuario.telefone"/>
+            <label for="telefone" >Telefone: </label>
+             <input type="text" name="telefone" maxlength="15" ng-model="usuario.telefone" ui-br-phone-number/>
         </div>
         <div>
             <label for="senha">Senha: </label>
