@@ -6,13 +6,13 @@ angular.module('easybook')
     var urlLogin  = SERVICE_PATH.PUBLICO_PATH + '/login';
     var urlLogout = SERVICE_PATH.PUBLICO_PATH + '/logout';
 
-    serviceFactory.login = function(email, password) {
+    serviceFactory.login = function(email, senha) {
       var requestParams = {
         method: 'GET',
         url: urlLogin,
         headers: {
           'Content-Type': 'application/json',
-          'Authorization' : 'Basic ' + btoa(email + ':' + password)
+          'Authorization' : 'Basic ' + btoa(email + ':' + senha)
         }
       };
 
