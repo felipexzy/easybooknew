@@ -1,10 +1,10 @@
 'use strict';
 
-var BASE_URL = 'http://localhost:8080';
+var BASE_URL = 'http://easybookalgodaodoce.herokuapp.com';
 
 
 angular.module('easybook', ['checklist-model', 'ngNotify', 'ngRoute', 'ngCookies', 'ngStorage', 
-                             'ngFileUpload'])
+                             'ngFileUpload', 'ui.utils.masks'])
     .constant('SERVICE_PATH', {
         'ROOT_PATH': BASE_URL,
         'PUBLICO_PATH': BASE_URL + '/publico',
